@@ -130,6 +130,7 @@ int main(int argc, char *argv[])
             }
         }
 
+        #include "hEqn.H"
         #include "TfEqn.H"
         #include "TsEqn.H"
 

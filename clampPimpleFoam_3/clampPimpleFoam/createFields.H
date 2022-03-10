@@ -119,6 +119,32 @@ volScalarField clampDummy
      mesh
  );
 
+ volScalarField hsf
+  (
+      IOobject
+      (
+          "hsf",
+          runTime.timeName(),
+          mesh,
+          IOobject::MUST_READ,
+          IOobject::AUTO_WRITE
+      ),
+      mesh
+  );
+  
+ volScalarField Red
+  (
+      IOobject
+      (
+          "Red",
+          runTime.timeName(),
+          mesh,
+          IOobject::MUST_READ,
+          IOobject::AUTO_WRITE
+      ),
+      mesh
+  );
+
 #include "createPhi.H"
 
 pressureReference pressureReference(p, pimple.dict());
