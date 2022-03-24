@@ -5,9 +5,9 @@
      fvScalarMatrix TsEqn
      (
          (rhos*Cps)*fvm::ddt(Ts)
-       - clampDummy*(1-por)*fvm::laplacian(Ks,Ts)
-       - clampDummy*Asf*hsf*(Tf-Ts)
-       - clampDummy*Qr
+       - (1-por)*fvm::laplacian(Ks,Ts)
+       - Asf*hsf*(Tf-Ts)/(1-por)
+       - clampDummy*Qr*(1-por)
      );
     TsEqn.relax();
     TsEqn.solve();
