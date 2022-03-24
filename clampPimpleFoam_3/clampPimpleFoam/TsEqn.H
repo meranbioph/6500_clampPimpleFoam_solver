@@ -6,7 +6,7 @@
      (
          (rhos*Cps)*fvm::ddt(Ts)
        - (1-por)*fvm::laplacian(Ks,Ts)
-       - Asf*hsf*(Tf-Ts)/(1-por)
+       - clampDummy*Asf*hsf*(Tf-Ts)/invPor
        - clampDummy*Qr*(1-por)
      );
     TsEqn.relax();

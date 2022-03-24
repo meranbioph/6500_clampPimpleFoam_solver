@@ -30,3 +30,6 @@ dimensionedScalar Asf("Asf", dimensionSet(0, -1, 0, 0, 0, 0, 0), laminarTranspor
 
 // Characteristic length = Equivalent diameter of a sphere [m]
 dimensionedScalar Deq("Deq", dimensionSet(0, 1, 0, 0, 0, 0, 0), laminarTransport);
+
+// Inverse porosity [ - ]
+dimensionedScalar invPor("invPor", dimensionSet(0, 0, 0, 0, 0, 0, 0), laminarTransport);
