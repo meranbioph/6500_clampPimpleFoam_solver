@@ -5,9 +5,9 @@
      aefff = turbulence->nu()/Pr + atf;
      fvScalarMatrix TfEqn
      (
-         por*fvm::ddt(Tf)
+         fvm::ddt(Tf)
          + por*fvm::div(phi,Tf)
-         - fvm::laplacian(aefff*por, Tf)
+         - por*fvm::laplacian(aefff, Tf)
          + clampDummy*fvm::Sp(Asf*hsf/(rhof*Cpf*por),Tf)
          - clampDummy*Asf*hsf*(Ts)/(rhof*Cpf*por)
      );
