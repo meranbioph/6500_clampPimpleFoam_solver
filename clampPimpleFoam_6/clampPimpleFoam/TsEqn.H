@@ -8,7 +8,7 @@
        - clampDummy*invPor*fvm::laplacian(Ks,Ts)
        - clampDummy*Asf*hsf*(Tf)
        + clampDummy*fvm::Sp(Asf*hsf,Ts)
-       - clampDummy*invPor*Qr
+       - clampDummy*Qr
        - covDummy*dimensionedScalar("d1", dimensionSet(0, 0, 0, 0, 0, 0, 0), 100.0)*fvm::laplacian(Ks,Ts)
        - inDummy*dimensionedScalar("d2", dimensionSet(0, 0, 0, 0, 0, 0, 0), 100.0)*fvm::laplacian(Ks,Ts)
        - outDummy*rhos*Cps*(Tf-Ts)*dimensionedScalar("d3", dimensionSet(0, 0, -1, 0, 0, 0, 0), 0.01)
